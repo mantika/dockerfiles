@@ -1,4 +1,4 @@
-FROM python:2.7.10
+FROM mantika/alpine_python:latest
 
 RUN mkdir -p /root/.ssh
 
