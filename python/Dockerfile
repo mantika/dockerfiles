@@ -4,6 +4,7 @@ RUN apk add --update \
     python \
     python-dev \
     py-pip \
+    openssh-client \
     git \
     build-base \
   && pip install virtualenv \
