@@ -1,4 +1,11 @@
-FROM mantika/alpine-python
+FROM python:2.7.10-slim 
+
+RUN apt-get update
+RUN apt-get install -y python-dev python-numpy python-scipy git
+RUN pip install --upgrade --no-deps git+git://github.com/Theano/Theano.git
+RUN pip install six
+
+ENV PYTHONPATH /usr/lib/python2.7/dist-packages/:$PYTHONPATH
 
 RUN mkdir -p /root/.ssh
 
