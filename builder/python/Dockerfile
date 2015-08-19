@@ -1,6 +1,7 @@
-FROM mantika/alpine-python
+FROM python:2.7-slim
 
 RUN mkdir -p /root/.ssh
+RUN apt-get update && apt-get install -y git build-essential
 
 COPY builder.pem /root/.ssh/id_rsa
 RUN chmod 700 /root/.ssh/id_rsa
