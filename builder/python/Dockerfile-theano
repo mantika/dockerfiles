@@ -15,4 +15,8 @@ RUN chmod 700 /root/.ssh/id_rsa
 RUN git config --global url.ssh://git@github.com/.insteadOf https://github.com/
 
 ONBUILD RUN ssh-keyscan -H github.com > /root/.ssh/known_hosts
+ONBUILD COPY requirements.prod /app/src/requirements.prod
+ONBUILD RUN virtualenv --system-site-packages /app/venv
+# Needs to be oneliner because RUN uses it's own shell instance
+ONBUILD RUN . /app/venv/bin/activate; pip install -r /app/src/requirements.prod --src /app/venv/lib/python2.7/site-packages
 ONBUILD COPY . /app/src
