@@ -33,6 +33,6 @@ The [input][3] plugin will take care of fetching the info through the stream whi
 This image is distributed under the [Apache License, Version 2.0][2].
 
 [1]: https://hub.docker.com/_/logstash/
-[2]: http://www.apache.org/licenses/LICENSE-2.0
+[2]: https://www.apache.org/licenses/LICENSE-2.0
 [3]: https://github.com/awslabs/logstash-input-dynamodb
-[4]: http://www.github.com/mantika/logstash-filter-dynamodb
+[4]: https://www.github.com/mantika/logstash-filter-dynamodb
