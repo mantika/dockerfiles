@@ -1,8 +1,8 @@
-#DynamodDB Logstash
+## DynamodDB Logstash
 
-This image is based on the official [logstash][1] image and adds support to DynamoDB through [DynamoDB streams](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tools.DynamoDBLogstash.html)
+This image is based on the official [logstash][1] image and adds support to DynamoDB through [DynamoDB streams](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tools.DynamoDBLogstash.html)
 
-## How to use this image
+### How to use this image
 
 The following command will get the information from a DynamoDB stream, index it in ElasticSearch so it becomes indexed by any field.
 
@@ -30,7 +30,7 @@ The [input][3] plugin will take care of fetching the info through the stream whi
 
 ## License
 
-This image is distributed under the [Apache License, Version 2.0][2].
+This image is distributed under the [Apache License, Version 2.0][2]
 
 [1]: https://hub.docker.com/_/logstash/
 [2]: https://www.apache.org/licenses/LICENSE-2.0
