@@ -7,7 +7,7 @@ This image is based on the official [logstash][1] image and adds support to Dyna
 The following command will get the information from a DynamoDB stream, index it in ElasticSearch so it becomes indexed by any field.
 
 ```
-docker run mantika/logstash-dynamo-streams -e '
+docker run mantika/logstash-dynamodb-streams -e '
 input { 
     dynamodb{endpoint => "dynamodb.us-east-1.amazonaws.com" 
     streams_endpoint => "streams.dynamodb.us-east-1.amazonaws.com" 
