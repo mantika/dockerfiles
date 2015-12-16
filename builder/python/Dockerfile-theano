@@ -18,5 +18,5 @@ ONBUILD RUN ssh-keyscan -H github.com > /root/.ssh/known_hosts
 ONBUILD COPY requirements.prod /app/src/requirements.prod
 ONBUILD RUN virtualenv --system-site-packages /app/venv
 # Needs to be oneliner because RUN uses it's own shell instance
-ONBUILD RUN . /app/venv/bin/activate; pip install --upgrade -r /app/src/requirements.prod --src /app/venv/lib/python2.7/site-packages
+ONBUILD RUN . /app/venv/bin/activate; pip install -r /app/src/requirements.prod --src /app/venv/lib/python2.7/site-packages; pip install --upgrade pillow
 ONBUILD COPY . /app/src
