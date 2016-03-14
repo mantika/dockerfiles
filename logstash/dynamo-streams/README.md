@@ -1,6 +1,14 @@
+
+# Supported tags and respective `Dockerfile` links
+
+-	[`1.x`, (*1.x/Dockerfile*)](https://github.com/mantika/dockerfiles/blob/1.x/logstash/dynamo-streams/Dockerfile)
+-	[`2.x`, (*2.x/Dockerfile*)](https://github.com/mantika/dockerfiles/blob/master/logstash/dynamo-streams/Dockerfile)
+
+
 ## DynamodDB Logstash
 
 This image is based on the official [logstash][1] image and adds support to DynamoDB through [DynamoDB streams](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tools.DynamoDBLogstash.html)
+
 
 ### How to use this image
 
@@ -25,6 +33,9 @@ output {
 stdout { } 
 }'
 ```
+
+**Note**: Configuration might change depending on used version
+
 
 The [input][3] plugin will take care of fetching the info through the stream while the [filter][4] will decode the information and make it available to be used for the output plugins 
 
