@@ -6,4 +6,4 @@ RUN ln -s /var/lib/logstash/.m2 /root/.m2
 
 ENV PATH /opt/logstash/vendor/jruby/bin/:$PATH
 RUN gem install logstash-input-dynamodb:'> 2' logstash-filter-dynamodb:'> 2'
-RUN plugin install logstash-input-dynamodb logstash-filter-dynamodb<Paste>
+RUN plugin install logstash-input-dynamodb logstash-filter-dynamodb
