@@ -1,4 +1,4 @@
-FROM logstash
+FROM logstash:2.3
 
 # Make .m2 accessible to logstash user, otherwise logstash won't start
 RUN mkdir -p /var/lib/logstash/.m2

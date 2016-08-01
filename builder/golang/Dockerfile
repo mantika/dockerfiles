@@ -1,4 +1,4 @@
-FROM golang:1.4.2
+FROM golang:1.6.3-wheezy
 
 RUN mkdir -p /root/.ssh
 RUN mkdir -p /go/src/app
